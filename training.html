@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Awign — Treinamento para gravação</title>
+<meta name="description" content="Treinamento para gravar tarefas domésticas com o app Minute: vídeo, celulares compatíveis, exemplos e regras." />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("awign_theme"); } catch (e) {}
+    document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+  })();
+</script>
+</head>
+<body data-page="training">
+
+<div id="nav"></div>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="hero__aura"></div>
+    <div class="shell hero__in">
+      <div class="rv">
+        <h1 data-i18n="tHeroTitle"></h1>
+        <p class="lede" data-i18n="tHeroLede"></p>
+        <div class="phonebox card card--edge">
+          <h3 data-i18n="tPhoneTitle"></h3>
+          <div class="phones"></div>
+          <p data-i18n="tPhoneBody"></p>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="vid" id="v-hero"></div>
+        <p class="vid__cap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span data-i18n="tHeroVideoCap"></span></p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MINUTE APP ================= -->
+  <section class="sec sec--tint" id="app">
+    <div class="shell">
+      <div class="head rv">
+        <h2 data-i18n="appTitle"></h2>
+        <p data-i18n="appBody"></p>
+      </div>
+      <div class="app">
+        <div class="rv"><div id="app-steps"></div></div>
+        <div class="app__sticky rv">
+          <div class="vid" id="v-app"></div>
+          <p class="vid__cap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span data-i18n="appVideoCap"></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SETUP ================= -->
+  <section class="sec" id="setup">
+    <div class="shell setup">
+      <div class="rv">
+        <h2 data-i18n="setupTitle"></h2>
+        <p class="lede" style="margin-top:16px" data-i18n="setupBody"></p>
+        <div id="setup-list" style="margin-top:22px"></div>
+      </div>
+      <div class="setup__img card card--edge rv">
+        <img src="assets/img/headmount-angles.jpg" alt="" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXAMPLES ================= -->
+  <section class="sec sec--tint" id="examples">
+    <div class="shell">
+      <div class="head rv">
+        <h2 data-i18n="exTitle"></h2>
+        <p data-i18n="exBody"></p>
+      </div>
+      <div class="exgroup rv">
+        <div class="exhead">
+          <span class="tag tag--good"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="goodTag"></span></span>
+          <h3 data-i18n="goodHeading"></h3>
+          <p data-i18n="goodSub"></p>
+        </div>
+        <div class="clips" id="clips-good"></div>
+      </div>
+      <div class="exgroup rv">
+        <div class="exhead">
+          <span class="tag tag--bad"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span data-i18n="badTag"></span></span>
+          <h3 data-i18n="badHeading"></h3>
+          <p data-i18n="badSub"></p>
+        </div>
+        <div class="clips" id="clips-bad"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DO / DON'T ================= -->
+  <section class="sec" id="standards">
+    <div class="shell">
+      <div class="head rv">
+        <h2 data-i18n="ddTitle"></h2>
+        <p data-i18n="ddBody"></p>
+      </div>
+      <div class="dd">
+        <div class="dd__col dd--good card card--edge card--spot rv">
+          <h3 data-i18n="doTitle"></h3>
+          <ul id="do-list"></ul>
+        </div>
+        <div class="dd__col dd--bad card card--spot rv">
+          <h3 data-i18n="dontTitle"></h3>
+          <ul id="dont-list"></ul>
+        </div>
+      </div>
+      <p class="dd__note rv" data-i18n="ddNote"></p>
+    </div>
+  </section>
+
+  <!-- ================= QUIZ ================= -->
+  <section class="sec sec--tint">
+    <div class="shell">
+      <div class="head rv">
+        <h2 data-i18n="quizTitle"></h2>
+        <p data-i18n="quizBody"></p>
+      </div>
+      <div class="meter rv">
+        <span id="q-count">0/5</span>
+        <span data-i18n="quizProgress"></span>
+        <span class="track"><span class="fill" id="q-fill"></span></span>
+      </div>
+      <div class="quiz" id="quiz"></div>
+    </div>
+  </section>
+
+</main>
+
+<div id="foot"></div>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

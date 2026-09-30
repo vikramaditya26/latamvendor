@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Awign — Seja um fornecedor</title>
+<meta name="description" content="Candidate sua empresa ao programa de fornecedores da Awign." />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("awign_theme"); } catch (e) {}
+    document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+  })();
+</script>
+</head>
+<body data-page="apply">
+
+<div id="nav"></div>
+
+<main class="shell apply" id="top">
+  <div class="head">
+    <h1 data-i18n="aTitle"></h1>
+    <p data-i18n="aLede"></p>
+  </div>
+
+  <form class="form card card--edge" id="apply-form" novalidate></form>
+
+  <div class="ok card card--edge" id="apply-ok" hidden>
+    <div class="ok__icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+    <h2 data-i18n="okTitle"></h2>
+    <p data-i18n="okBody"></p>
+    <div class="hero__cta">
+      <a class="btn btn--wa js-wa" target="_blank" rel="noopener" onclick="track('whatsapp_apply')"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.35A10 10 0 1012 2zm0 1.9a8.1 8.1 0 11-4.2 15l-.3-.18-2.6.7.7-2.55-.2-.31A8.1 8.1 0 0112 3.9zm-3.6 3.7c-.17 0-.45.06-.68.31-.23.25-.9.87-.9 2.12s.92 2.46 1.05 2.63c.13.17 1.8 2.86 4.42 3.9 2.18.86 2.62.69 3.1.64.47-.04 1.5-.61 1.72-1.2.21-.6.21-1.1.15-1.2-.06-.11-.23-.17-.48-.3-.25-.12-1.5-.74-1.73-.82-.23-.09-.4-.13-.57.12s-.65.82-.8.99c-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.25-.75-.66-1.25-1.48-1.4-1.73-.14-.25-.01-.38.11-.5.11-.11.25-.29.38-.44.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.37-.77-1.87-.2-.49-.4-.42-.55-.43h-.47z"/></svg><span data-i18n="okWa"></span></a>
+      <a class="btn btn--ghost" href="index.html" data-i18n="okHome"></a>
+    </div>
+  </div>
+</main>
+
+<div id="foot"></div>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

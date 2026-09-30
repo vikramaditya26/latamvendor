@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Awign — Programa de Fornecedores</title>
+<meta name="description" content="Seja fornecedor da Awign: sua equipe grava tarefas domésticas em primeira pessoa para projetos de IA. Treinamento, app e pagamento em ciclos de 15 dias." />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="apple-touch-icon" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("awign_theme"); } catch (e) {}
+    document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+  })();
+</script>
+</head>
+<body data-page="home">
+
+<div id="nav"></div>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="hero__aura"></div>
+    <div class="shell hero__in">
+      <div class="rv">
+        <span class="eyebrow" data-i18n="heroEyebrow"></span>
+        <h1 data-i18n="heroTitle"></h1>
+        <p class="lede" data-i18n="heroLede"></p>
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" href="apply.html" data-i18n="heroCta"></a>
+          <a class="btn btn--ghost btn--lg" href="#how" data-i18n="heroCta2"></a>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="vid" id="v-hero"></div>
+        <p class="vid__cap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg><span data-i18n="heroVideoCap"></span></p>
+      </div>
+    </div>
+
+    <div class="shell">
+      <div class="stats">
+        <div class="stat card card--edge card--spot card--lift rv">
+          <div class="stat__v" data-i18n="stat1V"></div>
+          <div class="stat__l" data-i18n="stat1L"></div>
+        </div>
+        <div class="stat card card--edge card--spot card--lift rv">
+          <div class="stat__v" data-i18n="stat2V"></div>
+          <div class="stat__l" data-i18n="stat2L"></div>
+        </div>
+        <div class="stat stat--phone card card--edge card--spot card--lift rv">
+          <div class="stat__v" data-i18n="stat3V"></div>
+          <div class="phones"></div>
+          <div class="stat__l" data-i18n="stat3L"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= THE WORK ================= -->
+  <section class="sec sec--tint" id="work">
+    <div class="shell work">
+      <div class="rv">
+        <h2 data-i18n="workTitle"></h2>
+        <p class="lede" style="margin-top:18px" data-i18n="workBody"></p>
+      </div>
+      <div class="work__grid rv">
+        <figure>
+          <div class="shot"><img src="assets/img/pov-dishes.jpg" alt="" loading="lazy" /></div>
+          <figcaption data-i18n="workCap1"></figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img src="assets/img/pov-sorting.jpg" alt="" loading="lazy" /></div>
+          <figcaption data-i18n="workCap2"></figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img src="assets/img/pov-wiping.jpg" alt="" loading="lazy" /></div>
+          <figcaption data-i18n="workCap3"></figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img src="assets/img/pov-cooking.jpg" alt="" loading="lazy" /></div>
+          <figcaption data-i18n="workCap4"></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="sec" id="how">
+    <div class="shell how">
+      <div class="head rv">
+        <h2 data-i18n="howTitle"></h2>
+        <p data-i18n="howBody"></p>
+        <a class="btn btn--primary how__cta" href="apply.html"><span data-i18n="heroCta"></span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="rv" id="how-steps"></div>
+    </div>
+  </section>
+
+  <!-- ================= ROLES ================= -->
+  <section class="sec sec--tint" id="roles">
+    <div class="shell">
+      <div class="head rv">
+        <h2 data-i18n="rolesTitle"></h2>
+        <p data-i18n="rolesBody"></p>
+      </div>
+      <div class="dd">
+        <div class="dd__col dd--good card card--edge card--spot rv">
+          <h3 data-i18n="youTitle"></h3>
+          <ul id="you-list"></ul>
+        </div>
+        <div class="dd__col dd--good card card--edge card--spot rv">
+          <h3 data-i18n="weTitle"></h3>
+          <ul id="we-list"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRAINING LINK ================= -->
+  <section class="sec" id="training">
+    <div class="shell">
+      <div class="band card card--edge card--spot rv">
+        <div>
+          <h2 data-i18n="trainTitle"></h2>
+          <p data-i18n="trainBody"></p>
+        </div>
+        <a class="btn btn--ghost btn--lg" href="training.html"><span data-i18n="trainCta"></span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="sec sec--tint" id="faq">
+    <div class="shell">
+      <div class="head head--center rv">
+        <h2 data-i18n="faqTitle"></h2>
+      </div>
+      <div class="faq" id="faq-list"></div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="sec" id="apply-cta">
+    <div class="shell">
+      <div class="final rv">
+        <h2 data-i18n="ctaTitle"></h2>
+        <p data-i18n="ctaBody"></p>
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" href="apply.html" data-i18n="heroCta"></a>
+          <a class="btn btn--wa btn--lg js-wa" target="_blank" rel="noopener" onclick="track('whatsapp_home')"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.35A10 10 0 1012 2zm0 1.9a8.1 8.1 0 11-4.2 15l-.3-.18-2.6.7.7-2.55-.2-.31A8.1 8.1 0 0112 3.9zm-3.6 3.7c-.17 0-.45.06-.68.31-.23.25-.9.87-.9 2.12s.92 2.46 1.05 2.63c.13.17 1.8 2.86 4.42 3.9 2.18.86 2.62.69 3.1.64.47-.04 1.5-.61 1.72-1.2.21-.6.21-1.1.15-1.2-.06-.11-.23-.17-.48-.3-.25-.12-1.5-.74-1.73-.82-.23-.09-.4-.13-.57.12s-.65.82-.8.99c-.14.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.25-.75-.66-1.25-1.48-1.4-1.73-.14-.25-.01-.38.11-.5.11-.11.25-.29.38-.44.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.37-.77-1.87-.2-.49-.4-.42-.55-.43h-.47z"/></svg><span data-i18n="ctaWa"></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="foot"></div>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
