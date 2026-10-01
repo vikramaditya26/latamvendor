@@ -1127,7 +1127,7 @@ const CONFIG = {
   /* Google Apps Script web-app URL that appends applications to the
      Google Sheet (see README). While this is blank, the form opens
      WhatsApp with the details filled in instead. */
-  APPLY_ENDPOINT: "",
+  APPLY_ENDPOINT: "https://script.google.com/macros/s/AKfycbzuKZMBUvzi65can_A7rCIT1pR7ZSCXR9Ex0P_ZWlCwtga9O-RZEQ1lVEVjrB1zSmb2/exec",
 
   WHATSAPP_NUMBER: "917048997884",
   WHATSAPP_DISPLAY: "+91 70489 97884",
