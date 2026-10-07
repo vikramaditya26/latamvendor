@@ -1755,3 +1755,15 @@ section[id] {
   max-width: 17ch;
   font-size: clamp(36px, 4.7vw, 58px);
 }
+
+/* Training page: the four headmount checks, two per row on wide screens. */
+@media (min-width: 960px) {
+  .setup__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+  }
+  .setup__grid .setup__row:nth-last-child(2) {
+    border-bottom: 0;
+  }
+}
